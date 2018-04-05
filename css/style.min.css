@@ -27,6 +27,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   background-image: linear-gradient(to right bottom, var(--colour-primary-light), var(--colour-primary-dark));
@@ -47,6 +50,11 @@ body {
   display: flex;
   flex: 0 0 40%;
   justify-content: center; }
+  @media only screen and (max-width: 31.25em) {
+    .search {
+      background-color: var(--colour-grey-light-2);
+      flex: 0 0 100%;
+      order: 1; } }
   .search__input {
     background-color: var(--colour-grey-light-2);
     border: none;
@@ -119,10 +127,20 @@ body {
   font-size: 1.4rem;
   list-style: none;
   margin-top: 3.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .side-nav {
+      display: flex;
+      margin: 0; } }
   .side-nav__item {
     position: relative; }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .side-nav__item:not(:last-child) {
+          margin-bottom: 0; } }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__item {
+        flex: 1; } }
   .side-nav__item::before {
     background-color: var(--colour-primary);
     content: "";
@@ -147,17 +165,34 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     z-index: 10; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        justify-content: center;
+        padding: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        flex-direction: column;
+        padding: 1.5rem .5rem; } }
   .side-nav__icon {
     fill: currentColor;
     height: 1.75rem;
     margin-right: 2rem;
     width: 1.75rem; }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__icon {
+        height: 1.5rem;
+        margin-bottom: .75rem;
+        margin-right: 0;
+        width: 1.5rem; } }
 
 .legal {
   color: var(--colour-grey-light-4);
   font-size: 1.2rem;
   padding: 2.5rem;
   text-align: center; }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex; }
@@ -175,6 +210,10 @@ body {
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
     text-transform: uppercase; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__heading {
+        font-size: 1.8rem;
+        padding: 1.25rem 2rem; } }
   .overview__stars {
     display: flex;
     margin-right: auto; }
@@ -198,13 +237,22 @@ body {
     justify-content: center;
     margin-left: 3rem;
     padding: 0 2.25rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating {
+        padding: 0 1.5rem; } }
   .overview__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating-average {
+        font-size: 1.8rem; } }
   .overview__rating-count {
     font-size: .8rem;
     text-transform: uppercase; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating-count {
+        font-size: .5rem; } }
 
 .btn-inline {
   background-color: transparent;
@@ -271,6 +319,8 @@ body {
   font-size: 1.3rem; }
   .recommend__count {
     margin-right: auto; }
+  .recommend__friends {
+    display: flex; }
   .recommend__photo {
     border: 3px solid var(--colour-white);
     border-radius: 50%;
@@ -278,7 +328,7 @@ body {
     height: 4rem;
     width: 4rem; }
     .recommend__photo:not(:last-child) {
-      margin-right: -1.5rem; }
+      margin-right: -2rem; }
 
 .review {
   background-color: var(--colour-white);
@@ -287,6 +337,10 @@ body {
   overflow: hidden;
   padding: 3rem;
   position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    .review {
+      padding: 2rem;
+      margin-bottom: 3rem; } }
   .review__text {
     margin-bottom: 2rem;
     position: relative;
@@ -327,11 +381,17 @@ body {
 .cta {
   padding: 3.5rem 0;
   text-align: center; }
+  @media only screen and (max-width: 56.25em) {
+    .cta {
+      padding: 2.5rem 0; } }
   .cta__book-now {
     font-size: 2rem;
     font-weight: 300;
     margin-bottom: 2.5rem;
     text-transform: uppercase; }
+    @media only screen and (max-width: 37.5em) {
+      .cta__book-now {
+        font-size: 1.8rem; } }
 
 .btn {
   background-image: linear-gradient(to right, var(--colour-primary-light), var(--colour-primary-dark));
@@ -372,6 +432,11 @@ body {
   margin: 8rem auto;
   max-width: 120rem;
   min-height: 50rem; }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0;
+      max-width: 100%;
+      width: 100%; } }
 
 .header {
   align-items: center;
@@ -381,9 +446,17 @@ body {
   font-size: 1.4rem;
   height: 7rem;
   justify-content: space-between; }
+  @media only screen and (max-width: 31.25em) {
+    .header {
+      align-content: space-around;
+      flex-wrap: wrap;
+      height: 11rem; } }
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   background-color: var(--colour-grey-dark-1);
@@ -402,6 +475,12 @@ body {
   display: flex;
   font-size: 1.4rem;
   padding: 4.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .detail {
+      padding: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
   background-color: var(--colour-white);
@@ -409,6 +488,14 @@ body {
   flex: 0 0 60%;
   margin-right: 4.5rem;
   padding: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .description {
+      padding: 2rem;
+      margin-right: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .description {
+      margin-bottom: 3rem;
+      margin-right: 0; } }
 
 .user-reviews {
   align-items: center;
