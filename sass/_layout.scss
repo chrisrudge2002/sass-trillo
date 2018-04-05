@@ -10,7 +10,7 @@
 .header {
     align-items: center;
     background-color: var(--colour-white);
-    border-bottom: var(--colour-grey-light-2);
+    border-bottom: 1px solid var(--colour-grey-light-2);
     display: flex;
     font-size: 1.4rem;
     height: 7rem;
@@ -34,7 +34,5 @@
     flex: 1;
     
     
-    
-    background-color: orangered;
     height: 80rem;
 }
